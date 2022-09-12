@@ -515,10 +515,10 @@ if __name__ == '__main__':
     parser.add_argument('--use_templates', action='store_true')
     parser.add_argument('--msa_mode', default='MMseqs2', help='Allowed: \'MMseqs2\', \'single_sequence\'.')
     parser.add_argument('--weights_loc', default='/home/db/unifold/params/uf_symmetry.pt')
-    parser.add_argument('--max_recycling_iters', default=3)
-    parser.add_argument('--num_ensembles', default=2)
-    parser.add_argument('--manual_seed', default=42)
-    parser.add_argument('--times', default=3, help='It\'s not clear what this argument means, I suppose it\'s number of the obtained models.')
+    parser.add_argument('--max_recycling_iters', default=3, type=int)
+    parser.add_argument('--num_ensembles', default=2, type=int)
+    parser.add_argument('--manual_seed', default=42, type=int)
+    parser.add_argument('--times', default=3, type=int, help='It\'s not clear what this argument means, I suppose it\'s number of the obtained models.')
 
     args = parser.parse_args()
 
